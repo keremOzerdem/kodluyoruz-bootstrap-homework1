@@ -1,0 +1,49 @@
+body{
+    background-color: #b4ffd8;
+    font-family: 'Roboto', sans-serif;
+}
+.text-color-lightblue{
+    color: #70c6c7;
+}
+.text-color-mediumblue{
+    color: #4b6982;
+}
+.text-color-darkblue{
+    color: #333a7b;
+}
+.text-color-brown{
+    color: brown;
+}
+.text-color-red{
+    color: red;
+}
+.links-color{
+    color: #4b6982;
+}
+.fs-20-bold{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.link-no-underline{
+    text-decoration: none;
+}
+.text-align-center{
+    text-align: center;
+}
+.text-align-left{
+    text-align: left;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+.mr-ml-2em{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mt-20{
+    margin-top: 20px;
+}
