@@ -6,45 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuş Meraklısının Gözlemevi</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 </head>
 
 <body>
-    <!-- Title - Start -->
-    <h1 class="text-align-center text-color-darkblue">Kuş Meraklısının Gözlemevi</h1>
-    <!-- Title - End -->
+    <!-- Navbar - Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+        <a class="navbar-brand font-weight-bold" style="color:darkturquoise" href="index.html">Kuş Meraklısının
+            Gözlemevi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Ana Sayfa<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="bird-types.html">Kuş Türleri</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about-us.html">Hakkımızda</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar - End -->
 
-    <!-- Links - Start -->
-    <div class="text-align-center">
-        <a href="index.html" class="mr-10 text-color-brown"><b>Ana Sayfa</b></a>
-        <a href="bird-types.html" class="mr-10 text-color-brown"><b>Kuş Türleri</b></a>
-        <a href="about-us.html" class="mr-10 text-color-brown"><b>Hakkımızda</b></a>
+    <!-- Jumbotron - Start -->
+    <div class="jumbotron text-align-center">
+        <h1 class="display-4 text-color-darkblue">Merhaba!</h1>
+        <p class="lead">
+            Kuş Meraklısının Gözlemevine hoşgeldiniz! Bu sitede çeşitli kuşlara ait bilgiler
+            yer almaktadır. Daha detaylı incelemek için <a href="bird-types.html" class="text-color-darkblue"><b>Kuş
+                    Türleri</b></a> sayfamızı ziyaret
+            edebilirsiniz.
+        </p>
+        <hr class="my-4">
+        <ul class="text-align-center" style="list-style-position: inside;">
+            <h4 class="text-color-brown mb-3">Sitemizde Bilgisi Bulunan Kuş Türleri</h4>
+            <li>Açık Yeşil Muhabbet Kuşu</li>
+            <li>Cennet Kuşu</li>
+            <li>Duivenbode Lorisi</li>
+            <li>Erguvani Parlak Sığırcık</li>
+            <li>Görkemli Çimen Paraket</li>
+            <li>Gouldian İspinozu</li>
+        </ul>
+        <a class="btn btn-primary btn-lg" href="about-us.html" role="button">Hakkımızda</a>
     </div>
-    <!-- Links - End -->
+    <!-- Jumbotron - End -->
 
-    <!-- Content - Start -->
-    <h2 class="text-align-center text-color-darkblue">Ana Sayfa</h2>
-    <p class="text-align-center">Kuş Meraklısının Gözlemevine hoşgeldiniz! Bu sitede çeşitli kuşlara ait bilgiler yer
-        almaktadır. Daha detaylı
-        incelemek için <a href="bird-types.html" class="text-color-darkblue" target="_blank"><b>Kuş Türleri</b></a>
-        sayfamızı ziyaret
-        edebilirsiniz.</p>
-    <ul class="text-align-center" style="list-style-position: inside;">
-        <h4 class="text-color-brown">Sitemizde Bilgisi Bulunan Kuş Türleri</h4>
-        <li>Açık Yeşil Muhabbet Kuşu</li>
-        <li>Cennet Kuşu</li>
-        <li>Duivenbode Lorisi</li>
-        <li>Erguvani Parlak Sığırcık</li>
-        <li>Görkemli Çimen Paraket</li>
-        <li>Gouldian İspinozu</li>
-    </ul>
-    <!-- Content - End -->
+    <!-- Optional JavaScript; choose one of the two! -->
 
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
 
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
 </body>
 
 </html>

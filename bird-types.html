@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuş Meraklısının Gözlemevi</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
@@ -14,123 +17,112 @@
 </head>
 
 <body>
-    <!-- Title - Start -->
-    <h1 class="text-align-center text-color-darkblue">Kuş Meraklısının Gözlemevi</h1>
-    <!-- Title - End -->
-
-    <!-- Links - Start -->
-    <div class="text-align-center">
-        <a href="index.html" class="mr-10 text-color-brown"><b>Ana Sayfa</b></a>
-        <a href="bird-types.html" class="mr-10 text-color-brown"><b>Kuş Türleri</b></a>
-        <a href="about-us.html" class="mr-10 text-color-brown"><b>Hakkımızda</b></a>
-    </div>
-    <!-- Links - End -->
+    <!-- Navbar - Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+        <a class="navbar-brand font-weight-bold" style="color:darkturquoise" href="index.html">Kuş Meraklısının
+            Gözlemevi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Ana Sayfa<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="bird-types.html">Kuş Türleri</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about-us.html">Hakkımızda</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar - End -->
 
     <!-- Content - Start -->
-    <ol style="list-style-position: inside;">
-        <h2 class="text-align-center text-color-darkblue">Kuş Türleri</h2>
-        <br>
-        <!-- Article 1 - Start -->
-        <article class="text-align-center mr-ml-2em">
-            <li class="text-color-red fs-20-bold mb-20 ">Açık Yeşil Muhabbet Kuşu</li>
-            <img src="https://hileciyimben.files.wordpress.com/2012/06/kucuk13348568876182634496e8b1b7eb11z.jpg?w=300&h=161"
-                alt="Açık Yeşil Muhabbet Kuşu">
-            <h3 class="text-color-darkblue">Temel Özellikleri</h3>
+    <h2 class="display-4 text-align-center text-color-darkblue my-5">Kuş Türleri</h2>
+    <!-- Cards - Start -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-xl-4">
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://im0-tub-ru.yandex.net/i?id=24a6275fb749498a619c1ff1e3d238b7&ref=rim&n=33&w=230&h=150"
+                        style="height: 60%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title text-color-darkblue">Açık Yeşil Muhabbet Kuşu</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://ilginckuslar.files.wordpress.com/2018/12/img_3500.jpg" style="height: 60%;"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title text-color-darkblue">Cennet Kuşu</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="data:image/jpeg;base64,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"
+                        style="height: 60%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title text-color-darkblue">Duivenbode Lorisi</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFhYZGBgYGBoYGRkYGBoaGBoYGBgaGhgYGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHjQrJCs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0MTQ0NDE2NDQ0NP/AABEIALcBEwMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQADBgIBB//EADwQAAEDAwIEAwUHAwQCAwEAAAEAAhEDBCESMQVBUWEicYEGEzKRoRRCUrHB0fAVYuEjcoLxM5IWQ6IH/8QAGgEAAwEBAQEAAAAAAAAAAAAAAQIDBAAFBv/EACoRAAMAAgIBAwMDBQEAAAAAAAABAgMREiExBEFREyJxBTKBFGGRocFS/9oADAMBAAIRAxEAPwCmmynbUQDADRk8yf1WauePuqHo3kFX7Q8QNV2kAho+qRPBCzzPXZ1V7Iem8HVeNuZWedWKMsKsmF3BJCaHtp4nBamyo4Cy/DnDV6raWABAUKfZOjz7OELfWILU1LBMqqs/CRoVGNpNLHkFPaFwIQPFGAmUuF3pMFDWxjTiu1LL69A+DB6pW/iCFq3E5TKDuxq3j5aIcJ8k0suLtf8AAc9CII6rEVasong182lU1uZrGktiYidiP5zVOHRoi2vJ9A9/AzzVP2gA+n1WOr8Xe8z8I6D913b8Ue3nPmu4tIZ5J2a8XGPMKrQCcJHR4w04cCPqmdndtcfCQV3Yy0/ARc08Y37JVcWbHiHsaTG8QfPUE215PX6Ieu3p5fwplQrQhqezbTmm8js8T9RlCVOF1mAlzCWjdzfE36beqftuSxzZPxEjr5CI6d0wt6rmRpPz5rtJ+4jlGQotRIatVfWNGo0vDAD96DpcD17hKXcN30OnscFLU0idTXsKHPgpna1CWoWpbOb8TSF3Txsps5N+4U89VQ9evdK5VIEplblxqVrwgazkzROQn34G5XNGtqJhK6lVcMuC0yP55oONooPmCVeyhPJLrW+aeycW1VsTKzXLQoEbWOS8VlSuJOFEvJibQjfRGULVoRyTNuypqMXob0X2Z6szK9pSMhG1qGVw2kjsfZZbXxYQfmtpwTizXDdYh1JVNrOYZaYU6lUK1s+rOuh1Qlxdd1g7f2ieBDgfNXv45qSPExOLG9/c53SS9uMoS44jPNL31ySnnHoZSNGVl0+rKWsciqTUWtDaOpV1MLktXjzCKZxbpyiGsVFB4KNYFOnoSitrEfSZG2FxSZlEvMBQun7C7ZbTrPAgGexRIu2xDsSOvOEs9+qat1qxyCMVW+ys5WvI5NmCWukwMjomdvTEcz3z/AsxbVX6ZYTB25jB3zy3jql1w64cfE6G7nVJA+i9TH+nZKhU+t+OgP1Ub0b2g3S4HJOx54OCFy620ugZ6eSxf9NvG0/fi3e+jp1aywaS3fWGk69MfeiFxS9qzAhzaccgC5u20RgeSC9Om3M0nooqSW2bl9N3QEc/+kNVsmOxBa7q3b5bLPM9sHkeI0nAf7m/onB4jX0sebdp1t1tax5Li3kSBlv/AChJXpaXlf7Dzmiurwx4+Eh3lg/JA1QWmHAg906teIagQ6i9rurdNQerWHV9CiyxrhmHtO0ic88ciovFUvtaEeOa8My5dhB3IWmuOFsOwLD22+RSm84TUElo1jtv8kr6JfTqTNVTlcSirm1O3PpGfkgtk6aZxbT3T+wd4Vn6Lsp1ZPhZ870hLeguVF5IUWPZHYvpvld1ELbORTsr0qZrfRQ+lKrdQTBjFHMSKheQt+yyq3cPnknDGIujREI8tB5GdZw4cwvK3CDONitEbXOyJbQxsleRh2Y7+klUVuGObmFuDbDoq6toCCIXLMw8jCspwjqDMIq5tYKjGckaraCyh5Q9w9MH0TGyX12LpezkV21WCtBZMkLM06RLsLY8EtiWhDKKy1lIqm8YQE7qWsBJr90SoJbYNGdq3XJC17glsD72CZ5c0Lfvh5TK24Y57GucYBAjGcOOoaeeJPqF6GDByfSC9T2wjhV25phgAPOciBz7boi9uXOBDnbiIA8PkeZE/mqraiaRdj9t5x1/7Q1+1z4iflH1K+im/pen77b60ZFE1l2v8m9u/au2qOoXRr1aRotJfahhOt2kgs1fAWmYk8owF81bYB7tTv8ATYSYAadThOzGeo/yr7VtTIBAGRkZjtPJH2zWzLjqOxJMk9ZPTsvGeHHhnlt/g2O3sNoWtGmz/Rotqvj4qrdQafIkAntHyS599xB7ixusdmwwR/xgJzTrCI5K33/dZPr1vpAVd9oTUeC8Qd94N/3Pb+xW14BRrMYBcFjnCIc17nSB+LUN/wCckssrt5kB3oRM/qj2X8QHCPLIQrLWuy8uGOazdUHkh/cTtuuKNyDsQR1CI98CpcijkEuaDH4e1rsbkLP8Q9nGPMscWO6HLf3WrbDo81TWpguMctk6Ecr3Pntbg9amZ06gObM/TdSjWjstu6lBJEoW5tadQ+NjSesQfmEtxyJViTM19oKid/0Olyc8eoP6KKP0X8EvoMy1s/KZMOEstwmdu2VSgsuaV4TlWNZ2UNuSkVCnjCjLZ6Da0jddz0RbOGjSCiKbQkbapBRtO4StBQ0DQVTcsDRKHF1CrubqWlDQwsqU9bsJpY8MEZEoHhpBcVqLZogIuWdsFPDARss9xbg8SQFvGMwg7u1Dhsl7XgfR8+4dZeLI5rbcHsw0bKujw4NJcUWb2GF1INeBIJ1w1pHIuAOf7RJ+sPKqiddBtekADy/JZzivB6rydDD5kFrfLUefbdCcQ9srlh8DKbBzJBeZ7zt5IKn7aXAdre9hMyBoxMQeeJHRWnB35BqvYDf7J1m1GvqNAbMjS4GIzLukbkJvYWXh1QAXRJE/daATPWYJ9Uvb7alz5dTBdqJJJLmkGIkO+EgjcckZX44KjZ0gHMN3wTOO/wAl6/olM+TJ6pZa6S6GNThoJz+WR0z3WduWBrnNO7TGe3RdVPaENaANW5jH0JOT/hAuv2PO2/PYySYAXsT6iNa2mZsGHNLbop4pW0tgEZPLp5/JA0rkpk6zLxo2zMTOCMfmEda8Bjkvn/1DLvJ38HqY9KQG3e87Aq51V7dwU/t+HaRsqL22C81ZE30NsVUL6DIR7L2VnK7tLyETb3ICap2c0P2ViDIwr6XFnN+Iah9Uj+1rl1yumfkKqp8M1dvxhh5wRyOEZRvWnIhYmnWCOpPPIwnc68FFm/8ASNV7wT2/mV6abSMdfmkDeIubvlGW3FGnAIneOYSqik1NeGNPs3n816hvtY/hC9R5IPExDKcJ/wAPtQGAlLKlLS6OhTUV4EKFdmNsJeGgKhpVT7gEbqllYBBIXRdVGUMSrtcqicrjkd6MSu9QC5c/CHqvTJDovL1VVr8lQ956rljUyQWX2VXS5a6xrAwsixiZ8LqODwOS6mKn2bikzCrunsYPERnvHqSdgl13xplvTL6jsbAc3OiQ1oWbsrmpXqsqXbD7sansptaXOe4tIZ4d9Ld5gDEnBKMY+Xb8FKekPLlh8NWoSymfC1uQH4mX9ugHrzQntBdtYGMgMpxLGj43k/eMY5jyJMkrviV1UrHW9pinhrHyQA6Ic87Oe8iAOncpNb8EfXc+q90Na0uEk5gw1rB5zACvxSZHfyLLuo6s6SA1s4DdsYyXEyl1xw6mGPdJxtJyZxt0W54V7PDLny1rX6Xavia0NkS3uD8+qzHtNpNTQzIbIyACTzJha4h0ul0Ir+7SZk6WJj/pM7Ot4c7j8o5d0M2lHr2yuqLIJTwnLK1po7uYJxzUswC7SPT9D6KFgMSef7o7h9qQ4HY8h8w4Hn0V8cOrQtUpkccJZNdjOrHfMCcdsFbKhZ4We9k6QfXe8Awxgbq5S+JGrYnwkwPxFbmlSwvO/UmqzPQcW1K2JLm3hIb8brVcRGCsfxB+682J7HbMXxOdZXthTLzCYfZNbiTsmdhw5oMhabtTI2xPeWjmAO5IB1YhbriFkDTWJubeJCTDl5oG9nNO7ynNjcauay7pBTTg1XOVopdHNdGmNOQh6lqZmEzoQQvXsWKq0yaeiunbCBv8yor2kqJebG5v5F98QSSg7i8wFLhj+koGqx3RXmQKS9t6FeyuClraBPJF06ZHIpmkHQd7ycKAodhKs1JdAL3PwhnuXDqirc9FIZBAMoq2t5KHs2SU/sbfEoU9HMoZZpjQoMosdUqGGtEnmewA5k4ACttqWZOAMn/KVXXEveVA7/62GabD992xqu7fhHLfmliXVf2O0l2NKPBS57bmuWOquH+lbOcAyi0uHicc6nxkwN8ZhOmXZY6o9go4cGNGo4ZI1vL4MGMho7DdYu54q4uc8uJcQGgzsBz+iAr8VdGgHBPXfn+g+S1pPwK068mz43xikTTYGl5Dw86ciAHatTZ6HcnHJdVeMMa0loDThjcANAGYaDkZJJPMlZehWYwEEkueJe4dBlrW9p/myS/1HVUyfACIHPzPyWnHKhL5ZKo5fhG9v75jWaJcHvkl25AIiZ7iAAOR+eYuuHao0mYxPWc+avpw46nOLg6N4gef7I3QIMeuc+a930+KVj/J5WbK4taMfdWwBOc7HzHRA+4cQSNhzn+ZWvr2bBOs75HXO8H/AAldzZgtDWAjxCciDJgeuyjl9L22jbh9SqWhayk0ARGrUJ5wNs+c7dkdZGWOMkumGyIMNmSJ5cvMKx9iQ7SIADdcDcEyGkz5z6lOPZmyNa5YwQKdGXvMZdBwzoBqLZU3rDDt+xR1zeka72Y4R7i2Y1wh7vG8EyWufnRP9ohvoU2JAVld6AqXC+bu+VNv3NQJxJ4hYDjFWHkd1s76tKyPFLbU7C6V7nbBLXKd2dE4wpwvhWASn7LQAYUsqbXQNiut8KyN7QklbK+owCs7Wpwcqfputg3pmXuLXKlgzS9aF9sCqv6fzAW2rWg80MbNx5pg0oC2fGCEQ+qFht7YrrZfrCiWOrqJeLACsZW1GBjZEU2OBh7cHsirC7B2afVG1HB045LWq9mWmn7i91am3ZslUPvW/hUuWgFLbirC6e2Dk2xiL9g3avWX9MmCEl1ko2zsSRJCZpIO/kPeKROIyrXcHDhLCqmWMhX2OpjokoN/Ado4oWJacyPTCeWLYEH5o61qBwh4lA+0FRluzWx0OeYa30y49h+yRPm9I7SfaYt9oOJNaPdAzMF8fh5MnocT2xzWffcuiYOecbjlHbyXDasy50uM8+fMk+v6q1jubs8s5joI/RbJhTOgpFDGvccggfzYBXNd7vUR8REZgkTGPPshft5mZIjYjptH0/RUucTkjJ68z/PmnS+As6ddVHjxeEYk8/CCB6wfoqbZgmTPUEdEVTpwPPdWtpADutETvslT14DWVDp0wZ3knkESLmBu4xyJSkP817WMYmCBJ674XqY/VKJ1ox16dW+xvWuWtIDQC6YHMTiZnpKpdWBPicAQSWtbAkjORy80oZdHU0NImTLjyznfplXsuQzU9viBLwCZkQIA8yYz+SH9YqB/TKQu/ru0OcCNZLW4JyByHXdq23/89sHU7Y1XAh1Zxc0YxTaTo25kl7vIt6LB+zPDnXNyxgkBvjqOH3WA5AB66g0ea+s3NUNbpbgAAADkAIAXj/qHq+Uqff8A4aceNQiq8uYlZ+44gJiVzxW8wcrLU6riSSV5U/cOzQ1q8qprASO5QLa8DK7s7rU5aJCmaO2YmA2QVscIn3sJMiA0L+Is3Wav8CVpL58hZTir4EKML7gNHFB8o+iEgoVoPZOLarhWqRKkNfSBVDmBePuYQ/2wSs1Q0LxZbo7KLz7UF4l0wdjBlNrBAhX2zASc7hIGX+pxTCxufEqUmi2tHPFrMgSFnKVEvdHdb8Q9sFLafDWtcXDmVSa1OzpYNwngOqS5Ov6TpbhOuHUQGBEvZhR5tjGS+z6Sq69IBwITe/pxlIqtzn1VJrYNji2cAJJgAST0A3WG41xI16rnn4B4WDowHHqdz59gmvtBxXRR0D4n4PZg+I/kPUrGmrJwVqwxr7mUle4zNXTnmP5ACHqXUAl3MEaeZ1bnt5qgvjJzPXbzVFyTqzPKJ7iQVoHLaLsh23QckWx2ZJzM/wCEvY8k9giS+CMpkxWhizlPNEV3AQOe+eaW/aYMxsvK10DA5zsOnWeqtOTiibnbL611kwPLCCNaDqfB/tH0M/oq2ue6G6t9wPEY5SNlZ7gSWBpaQQCSRgmfiJ2wD8ikd1THUpHD6jnmdv8AP8CNZbSGUmjxPIJiXE7ANHckj1PzqGjxHOlsCfxO57/zyW99lOC+6a2vVE1I8E/dafvRyMYGJjO5S3lnDLqv4ErvwPfZ7hgtaJDo948hzyNhHwsB5hox3JJQ3E73fKl9fHYFZ6/qkr5+81Zb2wNgXELuZCAY8qmo/JV9LZb8c6RxY6SpTqFpwugF4IRdATH1LiWliup8RJWZNydUck0oVhC7yuwh9xc4JKyt88uKZ3FcnCW1QulJM7eyulauImd1axzmGCjbRmArbmmJCpT0gMU3dV0Sk5uzO6e12yEmuLaUstPyNOj3+oFerltovE2pG4oto3OlNuHXMuGUhp0y4wBJTunwz3eidzk/PZLaQrNZRfhX27+vVAU3YRFJyz69iKf3GjtqmER7wQs6y90rt/EoEykclWcceug0RzWZNQAFzjAGSeisvrkveXH08krex1Y6Rim0+IzGqNzJ2aOq0YcTfRyXJi7iN017iS2eTZnA5D8z6qu3pjn0XFyA55DMsaYb0I5n1VjXbbLfKS6K66PbqhqbI5ZJ7dUNXoVHw4jViBBBMNHQbBMqt3FM0gCS/STiAA0yMczI9I74rYxwgOwIyGmCexPyRbkC2gW24e4xkCWhxz8MiQ094gx3XVeyqMglhhwxjf0TvhFCk06qh0sJjSAXbBuoYk8wciMpnc2rKry+XEYDHAkeEDB7Lm50HfZmbe1GTVwNMhrcknudlHOYzTOAZGAC45k4Od+cf41VtwemAYaMZJcZP1XAs6YMBrPQCCk5o7ZjvePcYY2J/Dv3GrYIkcIGkjV45EwMaSDho6Y+ic39EM8TRgEYH4ZGogdYlSrXaGahkv06TI3b8erockR5rTH0+Db8it0314BuCe7pvYa5LmtAc1h2Lp8LnNjbE5336L6Cy+bVbqB3ysTY8I96S45JMkbFO7a3NKAJjof0K8v1ULK97A00H1mJLxMwCmde6jdpWa9obuYY3nusUYWq0LrsW0XBxJ6otqGtrXZH06ULW3oFM6aV45ispMyjW0wk2KJ/dZRNMQjTZ9FRUpkcpKdMcocVW5klFU7R7tmH1EfmrqfCH/ec1vrJ+n7ruSRyTPbNmQrLxqYUuHNb94u+g/VWig3PhHmc/mp1k30juLMq6mTgA/JQcMqOOGHzMNHzdC1UHljywvTT6nZKr0MpM43gr/7P/YfsvU+92om5sbiAcH4EGAEjPVHcStNj0H6pzgDCFvSCwnoEU23sm/AlYcK1jlSAuwk9yG+wTiL3NyEEKznblMOIDwoCwoOe4NaPM7NA5uceQAyr455PSRd/cjsUg8aTgQS4gxDR8RLvut6lJ+J8QNVwoUAdG2B4nkbYAEMGYHqUZxnidN491ScRQa4a3j47h4OGsHJk7T5notB7McIa3xuaGEiSZ/8AGwbAv6/5W+I0tL+SkrijNjgFQHQGue4NlzabfhHV7zgefZDWtprcWMENBaHGZnOfFzjtAWi9p+Ph5NtbYDv/ACVNi7rHMBCWzGsaGt5c+ZPMlSz5JnqfIKrSO7m1YweEZ2k5PzS6jba3RKbXYlqTNqFrgRus022vIqbZxeWmh2kzGR6Ecvp8lp/Zh7H0PFAcw6S0EwObYkkxB5lB3FuKzA/Yhe2LBRe57W65AJYwOc5wx4tLAYjxcuZkiQnmqqXK8jztLtDivTLp0hJfsjmvJJJ69vRam2uWvYHtkBw2IggjBBHIgyEsr05f/u/RZXlqXpkPqU60xY97Xt6kJY/h4eSAYkyRu0xtLTj9VZxNjqFTVnQ7fsVcx4PiaVrm9rZVV0WU7a4o6nsOoRhjBLNvwmXsGPukyjqHEqj26nN0uBzpOpsnpgE88Dod4Krtbqrt7t57hpj5kQjHteQ55Gk6cSQeRLjExOTkpvsp9hT35KS9zxgxz2SG7tXa5cnrSMODDqLiXlrugHLdx+YyrXsY50HPMSYfEDcDcdxClWPjtpgcv5FFvRhFttydgT5BH0qQaZgAR0G6IaSd1mqhfp9+RXSsHzmB5n9EdSsQMl0+QRAfHX5SvTVb59Mz6Ib+BlCRy2kBy+v7LpremPQKh941o3EHr323Q77/ADADif7QdP8A7bIapjaDfM7L18R3Sa44i5vKPUT+qEdfvdsY7iZ+aeYZ20aP3oA/n8/6VNS+aOf7pPRE7knzMogsx+yHBbJ1kS8IMPEmA5JPofogrnjYJ8LTvzwDEoSuxCCnKdTJyttBv9Xf0+v+FFT9nUXaXwHkaxl0CN1Td1wWED+ZWPo8ZxvlH8PvdeJTcXPbBXgaMC7hcMK8rVABKmZ2A8Sq/dG6TcT4y4sFtQBDYiq8DL3EyWg8mj6/n1f3Wp8BEWTZxE9hn6LRjvgvBoh8UL/Z/hup4fUdpY0h0Z8Wg/lsJ7p97Scf0UxRpA6nnJP6DkNoRdnw4Tq0wXCDnONusQvW8Aokl0P1Hd2uTH/IGPRXXqZ46S7Kfu7Mpas92M5e7JP6I22fLhJWhZ7P0AdRaXn+57jP/FsD6I+3t2MwxjGf7WAFZMlJ+QOG+2KXU5ZhLKnCqrvhY7ffb81rnsGDt/ML0PB5z8vp05KSrj4O4aFVLhz9GkiCeQIOfRcvsCAxr4IGqIgjVA0zqiTMRvk+qbmoBB7ZyhOIQXMgNPiJIImNhLciHZPXE46Xw23Wxpn3B7QPZLtWoAAO0gBrnASX42cQWjAiWnGRDBrmOAcJO+8iCDsR1S6jXax7xJMjIJ5hx04jEtcBj8I6Kj7aW1ADGkgaZwWukgg9fu9/pBzTNN9dgcJvY3uGNd8YaQOowuG1WCGtDRj7sDHp5hLbl73Au16Wt06WhpcSIE7Y3JnvlDsuwxrdbwDk5IDoJ8MjyU1PQeOkPBW8OcnbA+uThR51NjTmMjzx6pHde0VJgxrcY5A/IE4/7S2t7Y4Oim6eriI9YJ2XTipvaRyRoxRLabG/C57o3MAvmQSCO/NcaAdDp06OQG5iM9h/Nlkf/kdaoTq06ANRbAkgECJIyZI2jE9JUZxd5yRz5chyCrUU5787Oo154hTZu8TOM8+0ql/ERyB88Afn+iydw/W4OG4R3vzH5qLx6EdfA2qXrjgR65VTKhJ8biZ7x+SSuvCDhG29wSjwehW6+R01zBsAP51VVeuEOwyqrhyCnRPvYJc1ZyvbdUvyr2uDRPRV10WS6D7dFuhJbe6VtTiA6pXL2SqXsMqALllMID7aFbSugg5YVLQfpUVH2lepeDDoxp2T7gDZUUWjL+0e/wBo+JIIG5OyHuLV78FwYD0En9l6os0eSeJJlNtwmk05Bf3cSZ9MD59U8t7fSzADRyDYA+QUUTts0JdBAOnZcVLwNkekfuoou9xyh/ERgCZ59OUIapxIYz8QxiM81FEr8Afg9N287DHUnqqKl45o7dOXqFFFNeSTpiu741oyROdhAG89EpvOPPeRp8GZgbHBGeqii3QloKp6CRxF1RtBoe7UHVPed8U87cyDt36rX2rGRlrTj8Lf2UUWL1ze0LfkxfG7ksqkNcWDGGktH/5iEBaAuqZJJPMmT6k7qKLVj/YvwMvA/bZjYgFI+I8PLHECFFF2NvkCQehYOkbLT2fAPDJKiia2w0GU+FMajW2rCIj6KKKLbMlN7M3xWx927UNiuaFaAooq+xee5CW3mEDc3qiiCS2FJFLLtVXF6TgbKKKiSKFIuiqX1yeaiiKSAdU65RdK4hRRc0jjv7eVFFENIOj/2Q=="
+                        style="height: 60%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title text-color-darkblue">Erguvani Parlak Sığırcık</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="data:image/jpeg;base64,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"
+                        style="height: 60%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title text-color-darkblue">Görkemli Çimen Paraket</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://blog.petmarketburada.com/wp-content/uploads/2019/11/gokkusagi-ispinozu-bak%C4%B1m%C4%B1-e1575560298130.jpg"
+                        style="height: 60%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title text-color-darkblue">Gouldian İspinozu</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <p>
-                Bu kuş, türünün doğal formu olarak bilinmektedir. En eski renkli muhabbet kuşu mutasyonları, geçen
-                yüzyılın
-                ikinci yarısında ortaya çıkmıştır. Sergilenmesi, ciddi olarak 1870’li yıllarda başlamıştır.
-                Değerlendirme
-                standartlarındaki gelişmelerinin yanında, bugünün evcilleştirlmiş muhabbet kuşları Avustralya’daki
-                kardeşlerine
-                göre daha iridir.
-            </p>
-        </article>
-        <!-- Article 1 - End -->
-        <hr>
-        <!-- Article 2 - Start -->
-        <article class="text-align-center mr-ml-2em">
-            <li class="text-color-red fs-20-bold mb-20">Cennet Kuşu</li>
-            <img src="https://hileciyimben.files.wordpress.com/2012/06/kucuk133493320839125735057da73d5698z.jpg?w=200&h=239"
-                alt="Cennet Kuşu">
-            <h3 class="text-color-darkblue">Temel Özellikleri</h3>
-            <p>
-                Erkek kuşun muhteşem üreme tüyleri cennet kuşunun karakteristik özelliklerindendir. Örnekleri
-                avikültürde
-                sergilenmiştir, fakat özel yuvalama alışkanlıkları sebebi ile kayıtlarda üreme oranının düşük olduğunu
-                görüyoruz. Cennet kuşları ilk olarak Portekizli deniciler tarafından, Afrika’nın Widah limanından
-                getirilmiştir. Kuşun ismi burdan gelmektedir. Aynı zamanda erkek kuşun siyah tüyleri sebebiyle dul kadın
-                kuşu olarak bilinir.
-            </p>
-        </article>
-        <!-- Article 2 - End -->
-        <hr>
-        <!-- Article 3 - Start -->
-        <article class="text-align-center mr-ml-2em">
-            <li class="text-color-red fs-20-bold mb-20">Duivenbode Lorisi</li>
-            <img src="https://hileciyimben.files.wordpress.com/2012/06/kucuk133502501543133600931fcee582f4z.jpg?w=300&h=199"
-                alt="Duivenbode Lorisi">
-            <h3 class="text-color-darkblue">Temel Özellikleri</h3>
-            <p>
-                Bu lorinin renklenmesi çok gariptir, çünkü çok az papağanda kahverengi hakim renktir. Odadayken
-                kanatlarındaki parlak sarı tüylerin vücut tüyleriyle dikkat çekici bir şekilde kontrast oluşturmasını
-                görebilirsiniz.Bu lori hiçbir zaman avikültürde iyi bilinen türler arasında yer almamıştır, fakat yakın
-                zamandada gittikçe artarak yaygınlaşmış ve daha fazla çift üretilmiştir.
-            </p>
-        </article>
-        <!-- Article 3 - End -->
-        <hr>
-        <!-- Article 4 - Start -->
-        <article class="text-align-center mr-ml-2em">
-            <li class="text-color-red fs-20-bold mb-20">Erguvani Parlak Sığırcık</li>
-            <img src="https://hileciyimben.files.wordpress.com/2012/06/kucuk133504177553805927387eecb6f36fz.jpg?w=300&h=300"
-                alt="Erguvani Parlak Sığırcık">
-            <h3 class="text-color-darkblue">Temel Özellikleri</h3>
-            <p>
-                Bu etkileyi kuşları, güneş ışığında güzel yanar döner tüylerini seyredebileceğiniz kuşhanelerde beslemek
-                oldukça kolaydır. Diğer çok yakın türler de buna uygundur, benzer bakımı olan uzun kuyruklu parlak
-                sığırcık
-                (L. Purpuropterus) gibi.Üremeden dolayı, özellikle küçük kuşlara karşı saldırganlaşabilir. Çiftler ayrı
-                bir
-                yerde beslenmelidir.
-            </p>
-        </article>
-        <!-- Article 4 - End -->
-        <hr>
-        <!-- Article 5 - Start -->
-        <article class="text-align-center mr-ml-2em">
-            <li class="text-color-red fs-20-bold mb-20">Görkemli Çimen Paraket</li>
-            <img src="https://hileciyimben.files.wordpress.com/2012/06/kucuk13352070224956989215a2578e8386z.jpg?w=208&h=300I"
-                alt="Görkemli Çimen Paraket">
-            <h3 class="text-color-darkblue">Temel Özellikleri</h3>
-            <p>
-                Uzun yıllar bu güzel kuş nadir bir avikültürel değerdi, fakat yıllar geçtikçe kuşhanelerde üretilmeye
-                uygun
-                oldu ve şimdi yaygın olarak bulunabiliyor. Kuşçuluğa yeni başlayanlar için gayet uygundur.
-            </p>
-        </article>
-        <!-- Article 5 - End -->
-        <hr>
-        <!-- Article 6 - Start -->
-        <article class="text-align-center mr-ml-2em">
-            <li class="text-color-red fs-20-bold mb-20">Gouldian İspinozu</li>
-            <img src="https://hileciyimben.files.wordpress.com/2012/06/kucuk133520519429970832283e3415d174z.jpg?w=300&h=224"
-                alt="Gouldian İspinozu">
-            <h3 class="text-color-darkblue">Temel Özellikleri</h3>
-            <p>
-                Şaşırtıcı renkleri ve üç değişik baş rengi (kırmızı, sarı, siyah) ile doğada bulunabilen Avustralya’dan
-                Gouldian ispinozu oldukça popüler bir kuştur.Gerçi bu ispinozlar en pahalı ispinozlardır ve çiftler her
-                zaman üremeye hazır değildir. Çoğalma şansını arttırmak için yumurtalar ve yavrulara kendi evladı gibi
-                bakacak Bengalese ispinozu kullanın, fakat Goludian ispinozuna da kendi yavrularını yetiştirme olanağı
-                verin.
-            </p>
-        </article>
-        <!-- Article 6 - End -->
-        <hr>
-        <!-- Content - End -->
+    <!-- Cards - End -->
 
+    <!-- Content - End -->
 
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+-->
 </body>
 
 </html>
